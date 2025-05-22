@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Multiplicar</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+
+</head>
+
+<body>
+    <h1>Tablas de Multiplicar</h1>
+    <p>Selecciona un número para ver la tabla de multiplicar correspondiente:</p>
+    <select id="numero" onchange="generarTabla()" class="color">
+        <option value=""></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <p id="resultado"></p>
+
+
+    <script>
+        
+        function generarTabla() {
+        let tabla = Number(document.getElementById('numero').value)
+        alert("Selecciona un numero entero del 1 al 10");
+
+
+            document.getElementById('resultado').innerHTML = `Tabla del ${tabla}: <br>
+    ${tabla} x 1 = ${tabla * 1} <br>
+    ${tabla} x 2 = ${tabla * 2} <br>
+    ${tabla} x 3 = ${tabla * 3} <br>
+    ${tabla} x 4 = ${tabla * 4} <br>
+    ${tabla} x 5 = ${tabla * 5} <br>
+    ${tabla} x 6 = ${tabla * 6} <br>
+    ${tabla} x 7 = ${tabla * 7} <br>
+    ${tabla} x 8 = ${tabla * 8} <br>
+    ${tabla} x 9 = ${tabla * 9} <br>
+    ${tabla} x 10 = ${tabla * 10} <br>`
+        }
+
+    </script>
+</body>
+
+</html>

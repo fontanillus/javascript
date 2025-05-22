@@ -1,0 +1,38 @@
+
+    html {
+  background-color:gold;
+}
+
+body {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 60%;
+  height: 60vh;
+  background-color:black;
+  color: goldenrod;
+  margin: 0 auto;
+  margin-top: 10%;
+  padding: 10px;
+  padding-top: 30px;
+  border-style: double;
+  border-width: 15px;
+  border-color: goldenrod;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  margin-top: 5%;
+  margin-left: 5%;
+  font-weight: 900;
+}
+
+.color {
+background-color: gold;
+}
+
+#numero {
+margin-left: 5%;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVA</title>
+    <link rel="stylesheet" href="./css/estil.css">
+</head>
+
+<body>
+    <fieldset>
+    <legend class="posicion">Calcular precio con el IVA incluido</legend>
+    <p <label for="articulo">Artículo </label>
+            <select id="item" onchange="calcularArticle()">
+                <option value=""></option>
+                <option value="cazadora">Cazadora</option>
+                <option value="pantalones">Pantalones</option>
+                <option value="camiseta">Camiseta</option>
+                <option value="cinturon">Cinturon</option>
+            </select>
+            <input type="text" id="articulo" required hidden>
+        </p>
+        
+
+    <p <label for="precio">Precio del artículo</label>
+        <select id="selector" onchange="calcularTotal()">
+                <option value=""></option>
+                <option value="100">100</option>
+                <option value="80">80</option>
+                <option value="70">70</option>
+                <option value="60">60</option>
+            </select>
+        <input type="number" id="precio" required hidden>
+    </p>
+
+    <p><label for="iva">IVA</label>
+        <input type="number" id="iva" required>
+    </p>
+</fieldset>
+    <p><button type="button" onclick="calcular()">Calcular Iva</button></p>
+    <p id="calcularIva">Total precio con IVA incluido:</p>
+
+    <script>
+
+        const ARTICULO = document.getElementById("articulo");
+        const PRECIO = document.getElementById("precio");
+        const IVA = document.getElementById("iva");
+
+        function calcularTotal(){
+        let TARIFA = document.getElementById("selector");
+        let PREU = document.getElementById("precio");
+        PREU.value = TARIFA.value;
+        }
+
+        function calcularArticle() {
+        let SAMPLE = document.getElementById("item");
+        let PRODUCT = document.getElementById("articulo");
+        PRODUCT.value = SAMPLE.value;
+        }
+
+        function calcular() {
+            let precio = Number(PRECIO.value);
+            let iva = Number(IVA.value);
+            console.log(precio, iva);
+
+            let total = precio * (iva / 100) + precio;
+            console.log(total);
+        
+
+            document.getElementById("calcularIva").innerHTML = `Este es el precio total en € del articulo ${ARTICULO.value} con el IVA incluido: ` + total;
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

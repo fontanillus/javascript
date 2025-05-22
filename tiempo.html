@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/estils.css">
+</head>
+
+<body>
+
+    <body>
+        <form>
+            <h1>Calcular tiempo en segundos</h1>
+            <br>
+            <p><label for="hora">Indica la hora:</label>
+                <input type="number" id="horas" class="una">
+            </p>
+
+            <p><label for="minutos">Indica los minutos:</label>
+                <input type="number" id="minutos" class="dos">
+            </p>
+
+            <p><label for="segundos">Indica los segundos</label>
+                <input type="number" id="segundos">
+            </p>
+
+            <p><button type="button" onclick="totalSegundos()">Calcular segundos
+                </button>
+            </p>
+            
+        </form>
+        <p id="calcularSegundos">El total de segundos es: </p>
+        <script>
+
+            const HORAS = document.getElementById("horas");
+            const MINUTOS = document.getElementById("minutos");
+            const SEGUNDOS = document.getElementById("segundos");
+            const RESULTADO = document.getElementById("calcularSegundos");
+
+
+            function totalSegundos() {
+                console.clear; //limpia consola
+
+                let hores = Number(HORAS.value);
+                let minuts = Number(MINUTOS.value);
+                let segons = Number(SEGUNDOS.value);
+
+                let total = (hores * 3600) + (minuts * 60) + segons;
+
+                RESULTADO.innerHTML = "El total de segundos es: " + total;
+            }
+        </script>
+    </body>
+
+</html>

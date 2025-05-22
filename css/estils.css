@@ -1,0 +1,72 @@
+html {
+  background-color: black;
+}
+
+body {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 60%;
+  height: 60vh;
+  background-color: gold;
+  color: black;
+  margin: 0 auto;
+  margin-top: 10%;
+  padding: 5px;
+  padding-top: 30px;
+  border-style: double;
+  border-width: 15px;
+  border-color: darkred;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  margin-top: 5%;
+  margin-left: 10%;
+  font-weight:bold;
+}
+
+button {
+  background-color: rgb(232, 232, 110);
+  padding: 5px;
+  padding-bottom: 5px;
+  border-color: darkred;
+  color: darkred;
+  font-weight: bold;
+}
+
+
+input {
+  color: darkred;
+  text-align: center;
+  border-color: darkred;
+  font-weight: bold;
+  background-color: rgb(232, 232, 110);
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+
+
+}
+
+.una {
+  padding-left: 11%;
+}
+
+.dos {
+  padding-left: 2%;
+
+}
+
+img {
+  width: 10%;
+  text-align: center;
+}
+
